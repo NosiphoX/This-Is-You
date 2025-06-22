@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  scroll-behavior: smooth;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.intro    { background: linear-gradient(to bottom, #ff9ff3, #f368e0); }
+.reader   { background: linear-gradient(to bottom, #576574, #222f3e); }
+.party    { background: linear-gradient(to bottom, #ee5253, #ff6b6b); }
+.lover    { background: linear-gradient(to bottom, #feca57, #ff9f43); }
+.seeker   { background: linear-gradient(to bottom, #48dbfb, #1dd1a1); }
+.wild     { background: linear-gradient(to bottom, #5f27cd, #341f97); }
+.us       { background: linear-gradient(to bottom, #ff6b81, #ff9ff3); }
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.5rem;
+  max-width: 600px;
+}
