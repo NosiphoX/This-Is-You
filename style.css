@@ -1,3 +1,4 @@
+/* Reset and fonts */
 * {
   margin: 0;
   padding: 0;
@@ -8,25 +9,51 @@ body {
   font-family: 'Cormorant Garamond', serif;
   scroll-behavior: smooth;
 }
-
 .section {
+  position: relative;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem;
-  color: white;
+  overflow: hidden;
 }
 
-.intro    { background: linear-gradient(to bottom, #ff9ff3, #f368e0); }
-.reader   { background: linear-gradient(to bottom, #576574, #222f3e); }
-.party    { background: linear-gradient(to bottom, #ee5253, #ff6b6b); }
-.lover    { background: linear-gradient(to bottom, #feca57, #ff9f43); }
-.seeker   { background: linear-gradient(to bottom, #48dbfb, #1dd1a1); }
-.wild     { background: linear-gradient(to bottom, #5f27cd, #341f97); }
-.us       { background: linear-gradient(to bottom, #ff6b81, #ff9ff3); }
+/* Overlay tint (still needed for color) */
+.section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+}
+
+/* Tint variations */
+.intro::after   { background: linear-gradient(to bottom, #ff9ff3, #f368e0); }
+.reader::after  { background: linear-gradient(to bottom, #576574, #222f3e); }
+.party::after   { background: linear-gradient(to bottom, #ee5253, #ff6b6b); }
+.lover::after   { background: linear-gradient(to bottom, #feca57, #ff9f43); }
+.seeker::after  { background: linear-gradient(to bottom, #48dbfb, #1dd1a1); }
+.wild::after    { background: linear-gradient(to bottom, #5f27cd, #341f97); }
+.us::after      { background: linear-gradient(to bottom, #ff6b81, #ff9ff3); }
+
+.section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Content on top */
+.section * {
+  position: relative;
+  z-index: 1;
+}
 
 h1 {
   font-size: 4rem;
